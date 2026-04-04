@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #4f46e5;
+  --secondary: #7c3aed;
+  --dark-bg: #030712;
+}
+
+@layer base {
+  body {
+    @apply bg-[#030712] text-slate-200 font-sans;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Animations */
+@keyframes borderPulse {
+  0% {
+    border-color: rgba(79, 70, 229, 0.5);
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+  }
+  50% {
+    border-color: rgba(124, 58, 237, 0.8);
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.5), 0 0 40px rgba(236, 72, 153, 0.3);
+  }
+  100% {
+    border-color: rgba(79, 70, 229, 0.5);
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.4), 0 0 40px rgba(124, 58, 237, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(79, 70, 229, 0.6), 0 0 60px rgba(124, 58, 237, 0.4), 0 0 80px rgba(236, 72, 153, 0.2);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes rotateGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse-shadow {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(79, 70, 229, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(124, 58, 237, 0.6)) drop-shadow(0 0 35px rgba(236, 72, 153, 0.3));
+  }
+}
+
+.animate-border-pulse {
+  animation: borderPulse 3s ease-in-out infinite;
+}
+
+.glass-card {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-semibold transition-all duration-300 shadow-lg shadow-indigo-500/20 active:scale-95;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 border border-indigo-500/30 hover:border-indigo-500/60 text-indigo-300 rounded-full font-semibold transition-all duration-300 active:scale-95;
+}
