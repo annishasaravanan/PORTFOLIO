@@ -30,7 +30,7 @@ const Internship = () => {
             title: "Front-End Certificate", 
             description: "Completion certificate for Professional Front-End Development Internship - Atdoor Company",
             issuer: "Atdoor Company",
-            year: "2024 - 2025",
+            year: "jan 2025-july 2025",
             certificateUrl: certificatePdf,
             downloadName: "Annisha_S_Atdoor_Internship_Certificate.pdf"
         },
@@ -39,11 +39,12 @@ const Internship = () => {
             title: "Full Stack Certificate", 
             description: "Completion certificate for Full Stack Developer Internship - Code4x",
             issuer: "Code4x",
-            year: "2025",
+            year: "dec 2025-feb 2026",
             certificateUrl: code4xCertificatePdf,
             downloadName: "Annisha_S-Internship-Certification-Mar26.docx.pdf"
         }
     ];
+
 
     return (
         <section id="experience" className="py-24 bg-dark/50">
